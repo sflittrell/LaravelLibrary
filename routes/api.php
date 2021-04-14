@@ -18,6 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// --------------------------BOOK--------------------------
+
 Route::get('/books/all', [App\Http\Controllers\BookController::class, 'index']);
 
 Route::get('/books/individualBook/{id}', [App\Http\Controllers\BookController::class, 'individualBook']);
@@ -27,5 +29,12 @@ Route::post('/books/create', [App\Http\Controllers\BookController::class, 'creat
 Route::post('/books/update/{id}', [App\Http\Controllers\BookController::class, 'update']);
 
 Route::post('/books/delete/{id}', [App\Http\Controllers\BookController::class, 'delete']);
+
+// ---------------------------USER-------------------------
+
+Route::get('/users/all', [App\Http\Controllers\UserController::class, 'index']);
+
+Route::post('/users/active/{id}', [App\Http\Controllers\UserController::class, 'active']);
+
 
 
