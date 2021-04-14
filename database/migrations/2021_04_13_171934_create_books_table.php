@@ -20,7 +20,6 @@ class CreateBooksTable extends Migration
           $table->integer('pages');
           $table->char('isbn');
           $table->datetime('published');
-          $table->datetime('added_to_library');
           $table->timestamps();
 
         });

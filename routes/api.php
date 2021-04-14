@@ -22,7 +22,7 @@ Route::get('/books/all', [App\Http\Controllers\BookController::class, 'index']);
 
 Route::get('/books/individualBook/{id}', [App\Http\Controllers\BookController::class, 'individualBook']);
 
-Route::post('/books/new', [App\Http\Controllers\BookController::class, 'create']);
+Route::post('/books/create', [App\Http\Controllers\BookController::class, 'create']);
 
 Route::post('/books/update/{id}', [App\Http\Controllers\BookController::class, 'update']);
 

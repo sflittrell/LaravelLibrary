@@ -27,7 +27,7 @@ class BookFactory extends Factory
             'pages' => $this->faker->numberBetween(30, 1000),
             'isbn' => $this->faker->isbn13,
             'published' => $this->faker->datetime(),
-            'added_to_library' => $this->faker->datetime(),
+            // 'added_to_library' => $this->faker->datetime(),
         ];
     }
 }
