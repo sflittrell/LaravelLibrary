@@ -8,10 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Checkout extends Model
 {
     use HasFactory;
-    protected $table = 'checkouts';
-    protected $primaryKey = 'id';
-    public $incrementing = true;
-    public $timestamps = true;
   
   protected $with = [
     'book', 'user'

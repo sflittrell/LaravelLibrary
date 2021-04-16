@@ -43,6 +43,6 @@ Route::post('/users/active/{id}', [UserController::class, 'active']);
 
 Route::get('/checkouts/all', [CheckoutController::class, 'index']);
 
-Route::get('/checkouts/show{id}', [CheckoutController::class, 'show']);
+Route::get('/checkouts/show/{id}', [CheckoutController::class, 'show']);
 
 

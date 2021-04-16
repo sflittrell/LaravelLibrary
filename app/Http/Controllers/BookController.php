@@ -16,12 +16,12 @@ class BookController extends Controller
   }
   
   public function create(Request $request) {
-    $book = new Book();
-    if ($request->title != null) {$book->title = $request->title;}
-    if ($request->excerpt != null) {$book->excerpt = $request->excerpt;}
-    if ($request->pages != null) {$book->pages = $request->pages;}
-    if ($request->isbn != null) {$book->isbn = $request->isbn;}
-    if ($request->published != null) {$book->published = $request->published;}
+    $book = new Book;
+     $book->title = $request->title;
+     $book->excerpt = $request->excerpt;
+     $book->pages = $request->pages;
+     $book->isbn = $request->isbn;
+     $book->published = $request->published;
     
     $book->save();
     return $book;

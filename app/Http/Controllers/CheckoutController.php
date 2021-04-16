@@ -45,9 +45,12 @@ class CheckoutController extends Controller
      * @param  \App\Models\Checkout  $checkout
      * @return \Illuminate\Http\Response
      */
-    public function show(Checkout $checkout, $id)
+    public function show($id)
     {
-        $book = Book::find($id);
+//       return Checkout::find($id);
+      $checkout = Checkout::where('user_id', $id)->get();
+        return $checkout;
+//       $book = Book::find($id);
     }
 
     /**
